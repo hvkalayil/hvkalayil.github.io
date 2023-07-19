@@ -42,7 +42,7 @@
         "icons":[]
     },
     {
-        "link": "http://rit.ac.in/ritsoft/ritwebsite/index.php?lang=_en",
+        "link": "http://rit.ac.in/",
         "name": " RIT Website",
         "imgPath": "ritwebsite",
         "description": "\n<p>\n A website developed for my college. This was done as part of my\n academic project. The website was build to showcase courses in the college\n and achievements. The system supports multi-user login, localization\n and follows a resposnive design\n</p>\n<p>\n I worked alongside \n <a href=\"https://www.linkedin.com/in/shiby-thomas-7a623b1b5/\" class=\"text-hover\" target=\"_blank\">Shiby Thomas</a> \n and <a href=\"https://www.linkedin.com/in/ashly-mohan-5b3379134/\" class=\"text-hover\" target=\"_blank\">Ashly Mohan</a>\n as a group and delivered system to our keen eyed professors \n <a href=\"https://www.linkedin.com/in/tomsy-paul-86a8a87/\" target=\"_blank\" class=\"text-hover\">Tomsy Paul</a>,\n <a href=\"#\" class=\"text-hover\">Sonu Priya</a>,\n <a href=\"#\" class=\"text-hover\">Jane</a> and\n <a href=\"#\" class=\"text-hover\">Shalu</a>\n . The professors mentored\n and helped us deliver the requirements.\n",

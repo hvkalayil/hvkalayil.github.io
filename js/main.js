@@ -1,13 +1,13 @@
 import { setTheme,toggleTheme, changePage } from "./theme";
 import { loadWorks } from "./works";
-import { loadCompetencies } from "./about";
+import { loadCompetencies,updateJourney } from "./about";
 import { loadExpAndAcad } from "./about/details";
 
 function initialize(){
     setTheme()
     loadWorks()
-    loadCompetencies()
     loadExpAndAcad()
+    updateJourney()
 }
 
 // Theme toggler
@@ -19,6 +19,9 @@ document.querySelectorAll(".themeToggler").forEach(element => {
 document.querySelectorAll(".actionButton").forEach(element => {
     element.addEventListener("click",changePage)
 });
+
+// Journey Tracker
+document.getElementById("journey").addEventListener("input",updateJourney)
 
 // Initializer
 document.addEventListener("DOMContentLoaded",initialize)
