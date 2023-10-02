@@ -1,4 +1,5 @@
 import jsonData from './works.json'
+import techData from '../about/tech.json'
 
 export function loadWorks() {
 
@@ -26,16 +27,14 @@ export function loadWorks() {
                 </h2>
                 </a>
                 <img class="projectImage work-img w-full aspect-video" src="assets/projects/${item.imgPath}.png" alt="${item.name} Overview" />
+                <div class="flex flex-row mt-2">
+                    ${iconsHtml}
+                </div>
             </div>
 
             <!-- Description -->
-            <div class="details tracking-wide my-2 text-ellipsis">
+            <div class="details tracking-wide text-ellipsis">
                 ${item.description}
-            </div>
-
-            <!-- Icons -->
-            <div class="flex flex-row icons my-2 flex-wrap">
-                ${iconsHtml}
             </div>
 
             </div>
@@ -63,14 +62,13 @@ function setNewTabSvg(link) {
 
 function setIcons(ico) {
     let icoHtml = '';
-    for (const icoDet of ico) {
+    for (const icoName of ico) {
+        const tech = techData.find((e) => e.title == icoName)
         icoHtml += `
-        <a
-        href="${icoDet.link}"
-        target="_blank"
-            class="flex flex-row rounded-xl p-1 m-1 bg-accent-0 border-2 border-accent-900 hover:shadow hover:shadow-accent-100 hover:bg-accent-100">
-            ${icoDet.name}
-        </a>`
+            <div class="flex w-8 p-1 items-center overflow-auto hover:scale-110">    
+                <img src="${tech.src}" alt="${tech.alt}" title="${tech.title}">
+            </div>
+        `
     }
     return icoHtml
 }
