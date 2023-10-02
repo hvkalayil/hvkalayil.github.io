@@ -148,5 +148,11 @@
     "alt": "Vite",
     "title": "Vite",
     "year": 2022
+  },
+  {
+    "src": "assets/technologies/nestjs.png",
+    "alt": "Nest JS",
+    "title": "Nest JS",
+    "year": 2023
   }
 ]
