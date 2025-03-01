@@ -1,15 +1,27 @@
-# hvkalayil.github.io
-This is the code to my portfolio @ https://hvkalayil.github.io/
 
-This use the github action to trigger build process
-The Build Artifact workflow builds the project and push to the `build` branch, The Github pages default workflow deploys it to Github Pages
+# My Portfolio
 
-## Developing
-Use 2 terminals for development
-One to watch the tailwind css and one to run the development server
-`npm run build-tailwind`
-`npm run build`
+This is the code for my portfolio. I have used astro and svelte to write the codebase
+The runtime I have used is Bun
 
-## Building
-`npm run build`
-This sets up the tailwind css file and generate the artifacts
+## Development
+
+- First install the dependencies
+
+    `
+    bun install
+    `
+
+- Now you can start the development server using
+
+    `
+    bun run dev
+    `
+
+Happy Coding 😊
+
+## Deployment
+
+The deployment is done through github actions and the portfolio is hosted in github pages at <https://hvkalayil.github.io/>
+
+View the workflow in .github folder

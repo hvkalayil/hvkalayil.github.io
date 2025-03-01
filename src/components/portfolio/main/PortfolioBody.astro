@@ -1,0 +1,49 @@
+---
+import MyWorks from "./my_works/MyWorks.astro";
+import AboutMe from "./about_me/AboutMe.astro";
+---
+
+<script>
+    const onMounted = () => {
+        let currentPage = "worksPage";
+
+        const myWorksBtn = document.getElementById("workBtn");
+        const aboutMeBtn = document.getElementById("aboutBtn");
+
+        if (!myWorksBtn || !aboutMeBtn) return;
+
+        const changePage = (pageName = "worksPage") => {
+            // Transitioning
+            const curr = document.getElementById(currentPage);
+            const nxt = document.getElementById(pageName);
+
+            if (!curr || !nxt) return;
+
+            curr.style.display = "none";
+            nxt.style.display = "flex";
+
+            nxt.classList.add("transit");
+            setTimeout(() => {
+                nxt.style.opacity = "1";
+            }, 800);
+            currentPage = pageName;
+        };
+
+        myWorksBtn.addEventListener("click", () => changePage("worksPage"));
+        aboutMeBtn.addEventListener("click", () => changePage("aboutPage"));
+
+        document.removeEventListener("DOMContentLoaded", onMounted);
+    };
+
+    document.addEventListener("DOMContentLoaded", onMounted);
+</script>
+
+<div
+    class="flex w-full bg-primary-900 dark:bg-primary-dark-900 h-screen md:w-3/4 overflow-visible overflow-x-hidden"
+>
+    <MyWorks />
+
+    <div class="body-container content-start" id="aboutPage">
+        <AboutMe />
+    </div>
+</div>

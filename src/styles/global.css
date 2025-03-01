@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Quicksand:wght@400;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  --hvk-scrollbar: '#222527';
+}
+
+@tailwind utilities;
+
+@theme {
+  --color-sidebar: oklch(99.011% 0.0069 219.56);
+  --color-sidebar-dark: oklch(26.221% 0.00577 236.76);
+  --color-primary-100: oklch(99.011% 0.0069 219.56 / 0.58824);
+  --color-primary-900: oklch(92.719% 0.01361 226.57);
+  --color-primary-dark-100: oklch(26.221% 0.00577 236.76 / 0.67843);
+  --color-primary-dark-900: oklch(22.515% 0.00493 248.05);
+  --color-accent-0: oklch(77.425% 0.13127 218.05 / 0.05882);
+  --color-accent-100: oklch(77.425% 0.13127 218.05 / 0.43137);
+  --color-accent-900: oklch(77.425% 0.13127 218.05);
+  --color-body: oklch(36.386% 0 none);
+  --color-body-dark: oklch(89.14% 0.01282 228.94);
+
+  --font-hero: Kanit, sans-serif;
+  --font-body: Quicksand, sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .btn-primary {
+    @apply flex flex-row justify-center items-center text-center m-2 my-4 md:my-2 md:m-auto p-2 w-2/4 transition bg-accent-0 border-accent-100 border-solid border-2 rounded-lg text-body dark:text-body-dark shadow-md hover:shadow-accent-100 focus:border-accent-900 focus:bg-accent-100;
+  }
+
+  .btn-theme {
+    @apply flex flex-row justify-center items-center text-center my-2 p-2 m-auto transition md:bg-accent-0 md:border-accent-100 md:border-solid md:border-2 rounded-lg text-body dark:text-body-dark shadow-md hover:shadow-accent-100 focus:border-accent-900 focus:bg-accent-100;
+  }
+
+  .card-container {
+    @apply flex w-full h-fit md:w-1/2 md:h-1/2 p-4 hover:scale-105 transition shadow-xl shadow-accent-0 hover:shadow-inner;
+  }
+
+  .card {
+    @apply flex flex-col justify-between overflow-auto p-3 rounded-md w-full z-20 transition-colors bg-sidebar dark:bg-sidebar-dark hover:bg-primary-100 hover:dark:bg-primary-dark-100 hover:shadow-sm hover:shadow-accent-100 hover:bg-gradient-to-r hover:from-accent-0;
+  }
+
+  .card-style {
+    @apply transition-colors bg-sidebar dark:bg-sidebar-dark hover:bg-primary-100 hover:dark:bg-primary-dark-100 hover:shadow-sm hover:shadow-accent-100 hover:bg-gradient-to-r hover:from-accent-0
+  }
+
+  .body-container {
+    @apply flex flex-row flex-wrap w-full h-full justify-center transition md:px-28 md:py-14
+  }
+
+  .text-hover {
+    @apply transition hover:text-accent-100 hover:decoration-accent-900 hover:decoration-2 text-accent-900 underline
+  }
+}
+
+img {
+  border-radius: 0.375rem;
+}
+
+.myName {
+  font-size: 3.4rem;
+  line-height: 2rem;
+  font-weight: 900;
+}
+
+.mobile-btn {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  display: none;
+}
+
+#big-theme-btn {
+  display: block;
+}
+
+#aboutPage {
+  display: none;
+  opacity: 0;
+}
+
+.work-img {
+  border-radius: 0.375rem;
+  height: 200px;
+}
+
+.icons svg {
+  margin: 0px 4px;
+}
+
+.details p {
+  margin-top: 10px;
+}
+
+.heading-details {
+  border-bottom: 5px solid #2BC9ED;
+}
+
+.exp-ball {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #2BC9ED;
+  top: 20px;
+  left: -26px;
+  cursor: pointer;
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-blend-mode: overlay;
+  background-size: 70px;
+  background-origin: border-box, border-box;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2BC9ED var(--hvk-scrollbar);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  margin: 10px 0;
+  background: var(--hvk-scrollbar);
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2BC9ED;
+  border-radius: 20px;
+}
+
+/* Works on Firefox */
+.card {
+  scrollbar-width: thin;
+  scrollbar-color: #2bc9ed0f var(--hvk-scrollbar);
+}
+
+.card:hover {
+  scrollbar-color: #2bc9ed6e;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-track {
+  margin: 10px 0;
+  background: var(--hvk-scrollbar);
+  border-radius: 20px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #2bc9ed0f;
+  border-radius: 20px;
+}
+
+.card:hover::-webkit-scrollbar-thumb {
+  background-color: #2bc9ed6e;
+}
+
+.transit {
+  animation: transitPage 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media screen and (min-width: 2000px) {
+  .myName {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .myName {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
+
+  #big-theme-btn {
+    display: none;
+  }
+}
+
+@keyframes transitPage {
+  from {
+    transform: scale(0.5, 0.5) translate(100vw);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.detailPaneUl {
+  list-style: circle;
+}
+
+.detailPaneUl ::marker {
+  padding-left: 10px;
+  color: #2BC9ED;
+}
+
+/* Style for the input slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: #2bc9ed0f;
+  outline: none;
+  border-radius: 0 40px 40px 0;
+  margin: 10px;
+  padding: 0 10px;
+}
+
+/* Style for the slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #2BC9ED;
+  border-radius: 50%;
+  cursor: pointer;
+}

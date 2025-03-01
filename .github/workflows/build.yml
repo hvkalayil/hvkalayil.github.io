@@ -1,4 +1,4 @@
-name: Build Artifcats
+name: Build Artifacts
 
 on:
   pull_request:
@@ -10,14 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code ✅
+      - name: Checkout code 🛎
         uses: actions/checkout@v3.5.3
 
-      - name: Install dependencies 🔧
-        run: npm install
-      
-      - name: Build 🏗️
-        run: npm run build
+      - name: Install Bun 🍞
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies 📦
+        run: bun install --frozen-lockfile
+
+      - name: Build artifacts 🏗
+        run: bun run build
 
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3

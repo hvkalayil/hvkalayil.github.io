@@ -1,0 +1,108 @@
+---
+import type { CollectionEntry } from "astro:content";
+import technologies from "../../../../content/tech.json";
+import { render } from "astro:content";
+
+interface Props {
+    project: CollectionEntry<"works">;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<script>
+    const onMounted = () => {
+        document.querySelectorAll(".projectCard").forEach((card) => {
+            card.addEventListener("mouseleave", (event) => {
+                if (event.currentTarget) {
+                    (event.currentTarget as HTMLElement).scrollTop = 0;
+                }
+            });
+        });
+
+        const showGif = (event: Event) => {
+            const obj = event.currentTarget as HTMLImageElement;
+            if (obj?.src.endsWith(".png")) {
+                obj.src = obj.src.replace(/\.png$/, ".gif");
+            }
+        };
+        const hideGif = (event: Event) => {
+            const obj = event.currentTarget as HTMLImageElement;
+            if (obj?.src.endsWith(".gif")) {
+                obj.src = obj.src.replace(/\.gif$/, ".png");
+            }
+        };
+        document.querySelectorAll(".projectImage").forEach((element) => {
+            element.addEventListener("mouseover", showGif);
+            element.addEventListener("mouseleave", hideGif);
+        });
+
+        document.removeEventListener("DOMContentLoaded", onMounted);
+    };
+
+    document.addEventListener("DOMContentLoaded", onMounted);
+</script>
+
+<div class="card-container">
+    <div id="scrollable" class="card projectCard">
+        <!-- Heading -->
+        <div class="heading">
+            <a class="mt-2" target="_blank" href={project.data.link}>
+                <h2
+                    class="flex my-1 text-xl font-bold transition text-accent-900 hover:decoration-2 items-center"
+                >
+                    {project.data.name} &nbsp;
+                    {
+                        project.data?.link && (
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                />
+                            </svg>
+                        )
+                    }
+                </h2>
+            </a>
+            <img
+                class="projectImage work-img w-full aspect-video"
+                src={`assets/projects/${project.data.imgPath}.png`}
+                alt={`${project.data.name} Overview`}
+            />
+            <div class="flex flex-row mt-2">
+                {
+                    project.data.icons.map((icon) => {
+                        const tech = technologies.find(
+                            (tech) => tech.title === icon,
+                        );
+                        return (
+                            tech && (
+                                <div class="flex w-8 p-1 items-center overflow-auto hover:scale-110">
+                                    <img
+                                        src={tech.src}
+                                        alt={tech.alt}
+                                        title={tech.title}
+                                    />
+                                </div>
+                            )
+                        );
+                    })
+                }
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="details tracking-wide text-ellipsis">
+            <Content />
+        </div>
+    </div>
+</div>

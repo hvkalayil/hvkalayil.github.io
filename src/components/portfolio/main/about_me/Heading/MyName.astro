@@ -1,0 +1,24 @@
+---
+const getMyExperience = () => {
+    const msInAYear = 365.25 * 24 * 60 * 60 * 1000;
+
+    const joiningDate = new Date("10/07/2021");
+    const today = new Date();
+    const diff = today.getTime() - joiningDate.getTime();
+
+    return (diff / msInAYear).toFixed(1);
+};
+const experience = getMyExperience();
+---
+
+<h1
+    class="flex-col dark:text-body-dark font-bold text-body tracking-wide md:text-4xl text-2xl"
+>
+    Hosea Varghese Kalayil
+</h1>
+<h4
+    class="flex-col dark:text-body-dark font-bold text-body tracking-wide md:text-2xl text-xl"
+>
+    Full Stack Developer
+</h4>
+<span class="flex-col text-lg" id="exp">Experience: {experience} years</span>
