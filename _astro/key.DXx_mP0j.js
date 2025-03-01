@@ -1,0 +1,1 @@
+import{k as c,o as i,q as _,u as h,v as r,w as k,x as u,y,z as d,U as v}from"./template.CYXDabh6.js";function I(f,n,o){r&&k();var e=f,s=v,a,t=c()?i:_;h(()=>{t(s,s=n())&&(a&&u(a),a=y(()=>o(e)))}),r&&(e=d)}export{I as k};
