@@ -1,0 +1,206 @@
+[
+    {
+        "src": "assets/technologies/html.webp",
+        "alt": "HTML",
+        "title": "HTML",
+        "year": 2014
+    },
+    {
+        "src": "assets/technologies/css.webp",
+        "alt": "CSS",
+        "title": "CSS",
+        "year": 2014
+    },
+    {
+        "src": "assets/technologies/bootstrap.webp",
+        "alt": "Bootstrap",
+        "title": "Bootstrap",
+        "year": 2014
+    },
+    {
+        "src": "assets/technologies/js.webp",
+        "alt": "JS",
+        "title": "Javascript",
+        "year": 2014
+    },
+    {
+        "src": "assets/technologies/ai.webp",
+        "alt": "Adobe Illustrator",
+        "title": "Adobe Illustrator",
+        "year": 2017
+    },
+    {
+        "src": "assets/technologies/ae.webp",
+        "alt": "Adobe After Effects",
+        "title": "Adobe After Effects",
+        "year": 2017
+    },
+    {
+        "src": "assets/technologies/blender.webp",
+        "alt": "Blender",
+        "title": "Blender",
+        "year": 2019
+    },
+    {
+        "src": "assets/technologies/php.webp",
+        "alt": "Php",
+        "title": "Php",
+        "year": 2019
+    },
+    {
+        "src": "assets/technologies/mysql.webp",
+        "alt": "My Sql",
+        "title": "My Sql",
+        "year": 2019
+    },
+    {
+        "src": "assets/technologies/python.webp",
+        "alt": "Python",
+        "title": "Python",
+        "year": 2021
+    },
+    {
+        "src": "assets/technologies/tailwind.webp",
+        "alt": "Tailwind",
+        "title": "Tailwind",
+        "year": 2021
+    },
+    {
+        "src": "assets/technologies/flutter.webp",
+        "alt": "Flutter",
+        "title": "Flutter",
+        "year": 2021
+    },
+    {
+        "src": "assets/technologies/flask.webp",
+        "alt": "Flask",
+        "title": "Flask",
+        "year": 2021
+    },
+    {
+        "src": "assets/technologies/django.webp",
+        "alt": "Django",
+        "title": "Django",
+        "year": 2021
+    },
+    {
+        "src": "assets/technologies/firebase.webp",
+        "alt": "Firebase",
+        "title": "Firebase",
+        "year": 2021
+    },
+    {
+        "src": "assets/technologies/git.webp",
+        "alt": "Git",
+        "title": "Git",
+        "year": 2021
+    },
+    {
+        "src": "assets/technologies/nodejs.webp",
+        "alt": "Node JS",
+        "title": "Node JS",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/react.webp",
+        "alt": "React",
+        "title": "React",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/mongo.webp",
+        "alt": "Mongo DB",
+        "title": "Mongo DB",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/docker.webp",
+        "alt": "Docker",
+        "title": "Docker",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/azure.webp",
+        "alt": "Azure Services",
+        "title": "Azure Services",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/gcloud.webp",
+        "alt": "Google Cloud",
+        "title": "Google Cloud",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/godot.webp",
+        "alt": "Godot",
+        "title": "Godot",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/angular.webp",
+        "alt": "Angular",
+        "title": "Angular",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/vite.webp",
+        "alt": "Vite",
+        "title": "Vite",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/nestjs.webp",
+        "alt": "Nest JS",
+        "title": "Nest JS",
+        "year": 2023
+    },
+    {
+        "src": "assets/technologies/rxjs.webp",
+        "alt": "RxJS",
+        "title": "RxJS",
+        "year": 2024
+    },
+    {
+        "src": "assets/technologies/circleci.webp",
+        "alt": "Circel CI",
+        "title": "Circel CI",
+        "year": 2024
+    },
+    {
+        "src": "assets/technologies/jasmine.webp",
+        "alt": "Jasmine",
+        "title": "Jasmine",
+        "year": 2024
+    },
+    {
+        "src": "assets/technologies/nextjs.webp",
+        "alt": "Next JS",
+        "title": "Next JS",
+        "year": 2024
+    },
+    {
+        "src": "assets/technologies/aws.webp",
+        "alt": "AWS",
+        "title": "AWS",
+        "year": 2024
+    },
+    {
+        "src": "assets/technologies/astro.webp",
+        "alt": "Astro",
+        "title": "Astro",
+        "year": 2025
+    },
+    {
+        "src": "assets/technologies/bun.webp",
+        "alt": "Bun",
+        "title": "Bun",
+        "year": 2025
+    },
+    {
+        "src": "assets/technologies/svelte.webp",
+        "alt": "Svelte",
+        "title": "Svelte",
+        "year": 2025
+    }
+]

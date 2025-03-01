@@ -1,0 +1,73 @@
+---
+import experienceData from "../../../../../content/experience.json"
+import academicData from "../../../../../content/academic.json"
+import Card from "./Card.svelte"
+---
+
+<div class="flex flex-col w-full">
+    <!-- Work Experience -->
+    <div class="flex flex-col">
+        <div class="w-full h-fit about-card-container p-4">
+            <div class="h-fit card">
+                <div class="flex flex-col">
+                    <div class="flex flex-row items-end justify-between">
+                        <h1
+                            class="font-bold tracking-wide md:text-2xl text-xl underline"
+                        >
+                            Work Experience
+                        </h1>
+                        <a href="assets/cert/resume.pdf" target="_blank">
+                            <div
+                                class="flex flex-row items-end justify-between bg-accent-0 border border-accent-100 cursor-pointer font-bold hover:bg-accent-100 hover:scale-105 m-1 p-2 rounded-md text-sm tracking-tighter transition"
+                            >
+                                <span class="hidden md:inline-block"
+                                ></span>Resume
+                                <svg
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex flex-col p-5" id="workExperience">
+                        {experienceData.map((experience) => (
+                            <Card data={experience} client:visible="svelte"/>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academics -->
+    <div class="flex flex-col">
+        <div class="w-full h-fit about-card-container p-4">
+            <div class="h-fit card">
+                <div class="flex flex-col">
+                    <div class="flex flex-row items-end justify-between">
+                        <h1
+                            class="font-bold tracking-wide md:text-2xl text-xl underline"
+                        >
+                            Academic Qualifications
+                        </h1>
+                    </div>
+                    <div class="flex flex-col p-5" id="academicQualifications">
+                        {academicData.map((academic) => (
+                            <Card data={academic} client:visible="svelte"/>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

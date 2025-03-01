@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import WorkCard from './WorkCard.astro';
+
+const works = await getCollection('works');
+works.sort((a, b) => b.data.sortOrder - a.data.sortOrder);
+---
+<div class="body-container" id="worksPage">
+    { works.map((work) => <WorkCard project={work}/>) }
+</div>
