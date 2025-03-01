@@ -17,7 +17,7 @@ jobs:
         uses: oven-sh/setup-bun@v1
 
       - name: Install dependencies 📦
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Build artifacts 🏗
         run: bun run build
