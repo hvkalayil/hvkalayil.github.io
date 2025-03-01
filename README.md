@@ -6,7 +6,7 @@ The runtime I have used is Bun
 
 ## Development
 
-- First install the dependencies
+- First install the dependencies 📦
 
     `
     bun install
