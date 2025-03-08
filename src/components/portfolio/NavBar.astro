@@ -1,6 +1,7 @@
 ---
-import ThemeButton from "./ThemeButton.svelte";
+import ThemeButton from "../shared/ThemeButton.svelte";
 ---
+
 <nav
     class="flex flex-col w-full bg-sidebar dark:bg-sidebar-dark flex-none h-fit justify-between left-0 md:h-screen md:w-1/4 sticky top-0 z-30"
     id="sidebar"
@@ -9,7 +10,10 @@ import ThemeButton from "./ThemeButton.svelte";
     <div class="flex flex-col w-full justify-center text-center">
         <img alt="HVK" src="/logo.png" class="2xl:w-20 m-auto w-14" />
 
-        <ThemeButton className="themeToggler btn-theme mobile-btn block md:hidden" client:only="svelte"/>
+        <ThemeButton
+            className="themeToggler btn-theme mobile-btn block md:hidden"
+            client:only="svelte"
+        />
 
         <h1 class="font-hero my-2 myName text-accent-900/80">
             Hosea Varghese Kalayil
@@ -19,10 +23,7 @@ import ThemeButton from "./ThemeButton.svelte";
     <!-- Buttons -->
     <div class="flex w-full flex-row justify-center md:flex-col text-center">
         <!-- MY Works -->
-        <button
-            class="actionButton btn-primary"
-            id="workBtn"
-        >
+        <button class="actionButton btn-primary" id="workBtn">
             <svg
                 class="h-6 w-6"
                 fill="none"
@@ -34,16 +35,12 @@ import ThemeButton from "./ThemeButton.svelte";
                     d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                ></path>
+                    stroke-width="2"></path>
             </svg>
             <h2 class="hidden font-semibold md:block ml-2 text-lg">My Works</h2>
         </button>
         <!-- About ME -->
-        <button
-            class="actionButton btn-primary"
-            id="aboutBtn"
-        >
+        <button class="actionButton btn-primary" id="aboutBtn">
             <svg
                 class="h-6 w-6"
                 fill="none"
@@ -55,13 +52,38 @@ import ThemeButton from "./ThemeButton.svelte";
                     d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                ></path>
+                    stroke-width="2"></path>
             </svg>
             <h2 class="hidden font-semibold md:block ml-2 text-lg">About Me</h2>
         </button>
+
+        <!-- Blogs -->
+        <a class="actionButton btn-primary" id="blogsBtn" href="/blog">
+            <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M4 4h16v16H4V4z"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path
+                    d="M8 8h8M8 12h8M8 16h4"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+            </svg>
+            <h2 class="hidden font-semibold md:block ml-2 text-lg">My blogs</h2>
+        </a>
+
         <!-- Theme Button -->
-        <ThemeButton className="themeToggler btn-theme hidden md:block" client:only="svelte"/>
+        <ThemeButton
+            className="themeToggler btn-theme hidden md:block"
+            client:only="svelte"
+        />
     </div>
 
     <!-- Placeholder -->

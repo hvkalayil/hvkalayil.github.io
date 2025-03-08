@@ -8,6 +8,7 @@
     const setTheme = () => {
         if (theme === "dark") {
             document.querySelector(':root').style.setProperty('--hvk-scrollbar', '#222527')
+            document.documentElement.classList.remove("dark");
             document.documentElement.classList.add("dark");
         } else {
             document.querySelector(':root').style.setProperty('--hvk-scrollbar', '#f7fdff')
