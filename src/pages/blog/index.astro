@@ -6,13 +6,12 @@ import BlogList from "../../components/blog/BlogList.svelte";
 import BlogHero from "../../components/blog/BlogHero.astro";
 import { getCollection } from "astro:content";
 import { formatMarkdownPost } from "../../utils";
+import BlogFooter from "../../components/blog/BlogFooter.astro";
 
 const posts = await getCollection("blogs");
 const formattedPosts = posts
   .map(formatMarkdownPost)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-const year = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -30,10 +29,6 @@ const year = new Date().getFullYear();
       <BlogList client:load posts={formattedPosts} />
     </main>
 
-    <footer>
-      <div class="flex justify-center items-center h-16 bg-primary-800 text-white">
-        <p>© {year} Optimal.dev</p>
-      </div>
-    </footer>
+    <BlogFooter />
   </body>
 </html>

@@ -4,18 +4,28 @@ import BaseHead from "../../components/shared/BaseHead.astro";
 import { BLOG_TITLE } from "../../consts";
 import Navbar from "../../components/blog/NavBar.astro";
 import { formatMarkdownPost } from "../../utils";
+import MarkdownLayout from "../../components/blog/MarkdownLayout.astro";
+import BlogFooter from "../../components/blog/BlogFooter.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blogs");
+  console.log(
+    posts.map((post) => ({
+      params: { id: post.id.split("/").pop() },
+      props: { post },
+    })),
+  );
+
   return posts.map((post) => ({
-    params: { id: post.id },
+    params: { id: post.id.split("/").pop() },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
 const formatttedPost = formatMarkdownPost(post);
-const { Content } = await render(post);
+const rendered = await render(post);
+const Content = rendered.Content;
 ---
 
 <!doctype html>
@@ -31,11 +41,20 @@ const { Content } = await render(post);
     class="bg-primary-900 text-body dark:bg-primary-dark-900 dark:text-body-dark"
   >
     <Navbar />
-    <main class="font-body max-w-3xl mx-auto p-6">
-      <a href="/blog" class="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-2 mb-4">
+
+    <main class="p-4 max-w-4xl m-auto">
+      <a
+        href="/blog"
+        class="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-2 mb-4"
+      >
         ⬅ Back
       </a>
-      <Content />
+
+      <MarkdownLayout>
+        <Content />
+      </MarkdownLayout>
     </main>
+
+    <BlogFooter>
   </body>
 </html>

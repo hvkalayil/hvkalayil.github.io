@@ -1,0 +1,191 @@
+---
+// src/layouts/MarkdownLayout.astro
+---
+
+<div class="markdown">
+    <slot />
+</div>
+
+<style is:global>
+    .markdown {
+        text-align: justify;
+    }
+
+    .markdown h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .markdown h2 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin-top: 1.4rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.3;
+        text-align: left;
+    }
+
+    .markdown h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 1.3rem;
+        margin-bottom: 0.7rem;
+        text-align: left;
+    }
+
+    .markdown h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+        text-align: left;
+    }
+
+    .markdown p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .markdown ul,
+    .markdown ol {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        text-align: left;
+    }
+
+    .markdown ul li {
+        list-style-type: disc;
+        margin-bottom: 0.5rem;
+    }
+
+    .markdown ol li {
+        list-style-type: decimal;
+        margin-bottom: 0.5rem;
+    }
+
+    .markdown a {
+        color: #3182ce;
+        text-decoration: underline;
+    }
+
+    .markdown a:hover {
+        text-decoration: none;
+    }
+
+    .markdown blockquote {
+        border-left: 4px solid #e2e8f0;
+        padding-left: 1rem;
+        font-style: italic;
+        margin: 1rem 0;
+    }
+
+    .markdown pre {
+        background-color: #1e293b;
+        border-radius: 0.375rem;
+        padding: 1rem;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+        color: #e2e8f0;
+        text-align: left;
+    }
+
+    .markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            "Liberation Mono", "Courier New", monospace;
+        font-size: 0.9em;
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+    }
+
+    .markdown pre code {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .markdown table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .markdown th,
+    .markdown td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem;
+        text-align: left;
+    }
+
+    /* Images with max-height for desktop */
+    .markdown img {
+        max-width: 100%;
+        height: auto;
+        max-height: 500px; /* Limit height on all screens */
+        margin: 1.5rem auto;
+        border-radius: 0.375rem;
+        display: block;
+        object-fit: contain; /* Maintain aspect ratio within constraints */
+    }
+
+    /* Responsive image handling */
+    @media (max-width: 768px) {
+        .markdown img {
+            max-height: none; /* Remove max-height on mobile for better visibility */
+        }
+    }
+
+    /* Center image containers/figures if present */
+    .markdown figure {
+        margin: 1.5rem auto;
+        text-align: center;
+    }
+
+    .markdown figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: #6b7280;
+        text-align: center;
+    }
+
+    .markdown hr {
+        border: 0;
+        border-top: 1px solid #e2e8f0;
+        margin: 2rem 0;
+    }
+
+    /* Dark mode */
+    .dark .markdown a {
+        color: #63b3ed;
+    }
+
+    .dark .markdown blockquote {
+        border-left-color: #4a5568;
+    }
+
+    .dark .markdown code {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .dark .markdown pre {
+        background-color: #1a202c;
+    }
+
+    .dark .markdown th,
+    .dark .markdown td {
+        border-color: #4a5568;
+    }
+
+    .dark .markdown hr {
+        border-top-color: #4a5568;
+    }
+
+    .dark .markdown figcaption {
+        color: #9ca3af;
+    }
+</style>
