@@ -5,7 +5,7 @@
 <li class="overflow-hidden rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800">
     <a href={post.url} class="block relative">
         <img
-            src={post.image || "/assets/blog/hero.webp"}
+            src={post.heroImage || "/assets/blog/hero.webp"}
             alt={post.title}
             class="w-full h-48 object-cover"
         />
