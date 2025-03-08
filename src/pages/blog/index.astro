@@ -1,0 +1,39 @@
+---
+import BaseHead from "../../components/shared/BaseHead.astro";
+import { BLOG_DESCRIPTION, BLOG_TITLE } from "../../consts";
+import NavBar from "../../components/blog/NavBar.astro";
+import BlogList from "../../components/blog/BlogList.svelte";
+import BlogHero from "../../components/blog/BlogHero.astro";
+import { getCollection } from "astro:content";
+import { formatMarkdownPost } from "../../utils";
+
+const posts = await getCollection("blogs");
+const formattedPosts = posts
+  .map(formatMarkdownPost)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead title={BLOG_TITLE} description={BLOG_DESCRIPTION} />
+  </head>
+
+  <body
+    class="bg-primary-900 text-body dark:bg-primary-dark-900 dark:text-body-dark"
+  >
+    <NavBar />
+    <main class="font-body w-full">
+      <BlogHero />
+      <BlogList client:load posts={formattedPosts} />
+    </main>
+
+    <footer>
+      <div class="flex justify-center items-center h-16 bg-primary-800 text-white">
+        <p>© {year} Optimal.dev</p>
+      </div>
+    </footer>
+  </body>
+</html>

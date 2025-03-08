@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseHead from "../../components/shared/BaseHead.astro";
+import { BLOG_TITLE } from "../../consts";
+import Navbar from "../../components/blog/NavBar.astro";
+import { formatMarkdownPost } from "../../utils";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blogs");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const formatttedPost = formatMarkdownPost(post);
+const { Content } = await render(post);
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title={`${BLOG_TITLE} | ${formatttedPost.title}`}
+      description={formatttedPost.tldr}
+    />
+  </head>
+
+  <body
+    class="bg-primary-900 text-body dark:bg-primary-dark-900 dark:text-body-dark"
+  >
+    <Navbar />
+    <main class="font-body max-w-3xl mx-auto p-6">
+      <a href="/blog" class="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-2 mb-4">
+        ⬅ Back
+      </a>
+      <Content />
+    </main>
+  </body>
+</html>
