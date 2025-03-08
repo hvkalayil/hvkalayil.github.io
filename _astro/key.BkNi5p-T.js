@@ -1,0 +1,1 @@
+import{o as c,q as i,u as _,v as h,w as r,x as u,y,z as d,A as k,U as v}from"./template.CTV4kuuz.js";function I(f,n,o){r&&u();var e=f,s=v,a,t=c()?i:_;h(()=>{t(s,s=n())&&(a&&y(a),a=d(()=>o(e)))}),r&&(e=k)}export{I as k};
