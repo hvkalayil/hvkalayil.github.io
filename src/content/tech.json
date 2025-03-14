@@ -150,12 +150,6 @@
         "year": 2023
     },
     {
-        "src": "assets/technologies/nestjs.webp",
-        "alt": "Nest JS",
-        "title": "Nest JS",
-        "year": 2023
-    },
-    {
         "src": "assets/technologies/rxjs.webp",
         "alt": "RxJS",
         "title": "RxJS",
