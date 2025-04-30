@@ -3,7 +3,7 @@ link: 'https://github.com/hvkalayil/crl_complete_code'
 name: 'CR Lab'
 imgPath: 'crlab'
 icons: ['Flask', 'My Sql']
-sortOrder: 10
+sortOrder: 50
 ---
 A website for Combustion Research Lab of IIT Bombay. Its a website for the staff to **view and share the publications** and also as a website for the lab.
 

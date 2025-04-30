@@ -196,5 +196,23 @@
         "alt": "Svelte",
         "title": "Svelte",
         "year": 2025
+    },
+    {
+        "src": "assets/technologies/deno.webp",
+        "alt": "Deno",
+        "title": "Deno",
+        "year": 2025
+    },
+    {
+        "src": "assets/technologies/fresh.webp",
+        "alt": "Fresh",
+        "title": "Fresh",
+        "year": 2025
+    },
+    {
+        "src": "assets/technologies/postgres.webp",
+        "alt": "Postgres",
+        "title": "Postgres",
+        "year": 2025
     }
 ]
