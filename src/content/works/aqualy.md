@@ -3,7 +3,7 @@ link: 'https://github.com/hvkalayil/aqualy_mob'
 name: 'Aqua.ly'
 imgPath: 'aqualy'
 icons: ['Flutter','Django','My Sql']
-sortOrder: 50
+sortOrder: 70
 ---
 A mobile **e-commerce** application for pet fish market. **Buy or sell** pet fishes online. Simple and intuitive UI.
 

@@ -3,7 +3,7 @@ link: 'https://github.com/hvkalayil/who_am_i'
 name: 'Who Am I'
 imgPath: 'whoami'
 icons: ['Flutter', 'My Sql', 'Firebase']
-sortOrder: 30
+sortOrder: 40
 ---
 A android application that can store your personal data **like a business card.** You can add **social media** links and personal **files**. You can choose to upload it in the cloud. Security of files are ensured with **AES encryption.**
 

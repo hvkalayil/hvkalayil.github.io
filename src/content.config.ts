@@ -9,6 +9,7 @@ const worksCollection = defineCollection({
         name: z.string(),
         imgPath: z.string(),
         icons: z.array(z.string()),
+        sortOrder: z.number(),
     }),
 });
 

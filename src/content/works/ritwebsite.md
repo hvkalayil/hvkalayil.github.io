@@ -2,7 +2,7 @@
 name: 'RIT Website'
 imgPath: 'ritwebsite'
 icons: ['Php','Bootstrap','My Sql']
-sortOrder: 70
+sortOrder: 10
 ---
 A website developed for my college. This was done as part of my academic project. The website was build to showcase courses in the college and achievements. The system supports multi-user login, localization and follows a resposnive design
 

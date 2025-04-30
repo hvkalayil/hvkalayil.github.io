@@ -3,7 +3,7 @@ link: 'https://play.google.com/store/apps/details?id=info.myhealthcard.therapeye
 name: 'Therapeye'
 imgPath: 'therapeye'
 icons: ["Flutter","Php","My Sql"]
-sortOrder: 40
+sortOrder: 30
 ---
 A mobile application that helps to**save and share medical records** among patients anddoctors. User can opt to keep records **locally**or **in the server.**
 
