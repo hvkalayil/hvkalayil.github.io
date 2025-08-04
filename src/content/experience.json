@@ -4,7 +4,55 @@
         "first": "Tata Consultancy Services(TCS)",
         "second": "Developer",
         "third": "<time datetime=\"2021-10-07\">October 7th, 2021</time> - Present",
-        "body": "<div class=\"exp-ball opacity-50 hover:scale-105 transition\"></div><h4 class=\"font-bold\"> Vizzhy (October 2024 - Present) </h4><div class=\"pl-2 pt-2\"><ul class=\"detailPaneUl\"><li><strong>Technology Stack</strong> – OpenAI, React, Next.js, Tryterra, Zoom API, AWS.</li><li>Led a <strong>team of 7</strong>, managing development and client priorities.</li><li>Integrated <strong>OpenAI-powered transcription and AI analytics.</strong></li><li>Built <strong>IoT data visualizations</strong> using Tryterra.</li><li>Developed <strong>Zoom API integrations</strong> for meetings.</li></ul></div>  <div class=\"exp-ball opacity-50 hover:scale-105 transition\"></div><h4 class=\"font-bold\"> Deputee (Mid 2024 - October 2024) </h4><div class=\"pl-2 pt-2\"><ul class=\"detailPaneUl\"><li><strong>Technology Stack</strong> – React, Next.js, Redux, AWS.</li><li>Optimized <strong>React &amp; Next.js</strong> applications for performance.</li><li>Improved <strong>SSR, suspense loaders,</strong> and <strong>API caching.</strong></li><li>Enhanced state management using <strong>Redux and React Query.</strong></li></ul></div>  <div class=\"exp-ball opacity-50 hover:scale-105 transition\"></div><h4 class=\"font-bold\"> Infomedia (January 2023 - Mid 2024) </h4><div class=\"pl-2 pt-2\"><ul class=\"detailPaneUl\"><li><strong>Technology Stack</strong> – Angular 16, RxJS, Micro Frontends, CircleCI, SQL Server.</li><li>Migrated <strong>AngularJS to Angular 16</strong> for better scalability.</li><li>Developed a <strong>platform-agnostic</strong> payment system.</li><li>Implemented <strong>CI/CD pipelines</strong> using CircleCI.</li></ul></div> <div class=\"exp-ball opacity-50 hover:scale-105 transition\"></div><h4 class=\"font-bold\"> Mylan Data Management (October 2021 - January 2023)</h4><div class=\"pl-2 pt-2\"><ul class=\"detailPaneUl\"><li><strong>Technology Stack</strong> – Angular, Python, SQL Server, - Azure Services.</li> <li>Built UI using <strong>Reactive Forms</strong> in Angular.</li> <li>Implemented <strong>SSO login</strong> with Azure Managed Identity.</li> <li>Developed <strong>file upload to Azure Blob Storage</strong> using Azure Functions.</li> <li>Contributed to <strong>backend logic</strong> in Python.</li></ul></div>"
+        "body": [
+            {
+                "title": "Uniting (May 2025 - Present)",
+                "points": [
+                    "<strong>Technology Stack</strong> – React, Redux, Tanstack, Vitest, .NET",
+                    "<strong>Led front-end architecture revamp </strong> for improved scalability and performance",
+                    "Integrated <strong>TanStack Query</strong> and optimized data-fetching patterns",
+                    "Enhanced developer productivity through reusable utilities and better state management"
+                ]
+            },
+            {
+                "title": "Vizzhy (October 2024 - April 2025)",
+                "points": [
+                    "<strong>Technology Stack</strong> – OpenAI, React,Next.js, Tryterra, Zoom API, AWS.",
+                    "Led a <strong>team of 7</strong>, managing development and client priorities.",
+                    "Integrated <strong>OpenAI-powered transcription and AIanalytics.</strong>",
+                    "Built <strong>IoT data visualizations</strong> usingTryterra.",
+                    "Developed <strong>Zoom API integrations</strong> for meetings."
+                ]
+            },
+            {
+                "title": "Deputee (Mid 2024 - October 2024)",
+                "points": [
+                    "<strong>Technology Stack</strong> – React, Next.js, Redux, AWS.",
+                    "Optimized <strong>React &amp; Next.js</strong> applications for performance.",
+                    "Improved <strong>SSR, suspense loaders,</strong> and <strong>API caching.</strong>",
+                    "Enhanced state management using <strong>Redux and React Query.</strong>"
+                ]
+            },
+            {
+                "title": "Infomedia (January 2023 - Mid 2024)",
+                "points": [
+                    "<strong>Technology Stack</strong> – Angular 16, RxJS, Micro Frontends, CircleCI, SQL Server.",
+                    "Migrated <strong>AngularJS to Angular 16</strong> for better scalability.",
+                    "Developed a <strong>platform-agnostic</strong> payment system.",
+                    "Implemented <strong>CI/CD pipelines</strong> using CircleCI."
+                ]
+            },
+            {
+                "title": " Mylan Data Management (October 2021 - January 2023)",
+                "points": [
+                    "<strong>Technology Stack</strong> – Angular, Python, SQL Server, - Azure Services.",
+                    "Built UI using <strong>Reactive Forms</strong> in Angular.",
+                    "Implemented <strong>SSO login</strong> with Azure Managed Identity.",
+                    "Developed <strong>file upload to Azure Blob Storage</strong> using Azure Functions",
+                    "Contributed to <strong>backend logic</strong> in Python"
+                ]
+            }
+        ]
     },
     {
         "id": "Applore2",
@@ -12,7 +60,16 @@
         "second": "Flutter Developer Intern",
         "third": "<time datetime=\"2021-03-30\">March, 2021</time> - <time datetime=\"2021-04-30\">April,2021</time>",
         "link": "applore",
-        "body": "\n        <div class=\"pl-2 pt-2\">\n            <ul class=\"detailPaneUl\">\n                <li> Technology Stack - <strong>Flutter</strong>, <strong>Stripe</strong> and <strong>Agora SDK.</strong></li>\n                <li> Developed layouts for multiple mobile applications. </li>\n                <li> Implemented <strong>Web RTC</strong> to create an online chat room feature in a mobile application. </li>\n                <li> Implemented <strong>Stripe</strong> payment gateway feature in a mobile application. </li>\n            </ul>\n        </div>\n        "
+        "body": [
+            {
+                "points": [
+                    "Technology Stack - <strong>Flutter</strong>, <strong>Stripe</strong> and <strong>Agora SDK.</strong>",
+                    "Developed layouts for multiple mobile applications. ",
+                    "Implemented <strong>Web RTC</strong> to create an online chat room feature in a mobile application. ",
+                    "Implemented <strong>Stripe</strong> payment gateway feature in a mobile application. "
+                ]
+            }
+        ]
     },
     {
         "id": "Saudha3",
@@ -20,6 +77,15 @@
         "second": "Flutter Developer Intern",
         "third": "<time datetime=\"2020-08-18\">August, 2020</time> - <time datetime=\"2020-10-31\">October,2020</time>",
         "link": "saudha",
-        "body": "\n        <div class=\"pl-2 pt-2\">\n            <ul class=\"detailPaneUl\">\n                <li> Technology Stack - <strong>Flutter</strong>, <strong>PHP</strong> and <strong>MySQL.</strong></li>\n                <li> Developed a medical file sharing application <strong> Full - Stack. </strong> </li>\n                <li> Developed and designed <strong>UI elements</strong> for the application </li>\n                <li> Developed API to <strong>save user data and files</strong> using PHP </li>\n            </ul>\n        </div>\n        "
+        "body": [
+            {
+                "points": [
+                    "Technology Stack - <strong>Flutter</strong>, <strong>PHP</strong> and <strong>MySQL.</strong>",
+                    "Developed a medical file sharing application <strong> Full - Stack. </strong>",
+                    "Developed and designed <strong>UI elements</strong> for the applicatio",
+                    "Developed API to <strong>save user data and files</strong> using PHP "
+                ]
+            }
+        ]
     }
 ]
