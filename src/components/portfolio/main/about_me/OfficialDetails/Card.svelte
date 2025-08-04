@@ -21,10 +21,26 @@
 
         {#if showBody}
             <div transition:slide class="flex flex-col w-full pl-4 py-4">
-                {@html data.body}
+                {#each data.body as details}
+                    {#if details.title}
+                        <div
+                            class="exp-ball opacity-50 hover:scale-105 transition"
+                        ></div>
+                        <h4 class="font-bold">{@html details.title}</h4>
+                    {/if}
+
+                    <div class="pl-2 pt-2">
+                        <ul class="detailPaneUl">
+                            {#each details.points as point}
+                                <li>{@html point}</li>        
+                            {/each}
+                        </ul>
+                    </div>
+                {/each}
             </div>
         {/if}
     </div>
+
     <div class="flex flex-col justify-start">
         {#if data.body}
             <button
