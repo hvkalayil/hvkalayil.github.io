@@ -1,12 +1,3 @@
----
-title: 'How to be a Tarzan developer'
-tags: ['Tarzan Developer', 'SSH']
-tech: []
-tldr: 'Being a Tarzan Developer means coding from anywhere—even a forest. 🌲💻 I set up my PC with Tailscale for remote SSH access, installed Termux on mobile, and used Neovim (LazyVim) as my IDE. This let me work remotely without a powerful local device. It was fun at first, feeling like a hacker from Watch Dogs, but Tailscale’s reconnection issues made it unreliable. While its a free, DIY alternative to cloud desktops, its not for everyone. If you want a portable dev setup, try it! But if stability matters, Azure Virtual Desktop or similar services are better. 🚀'
-date: '2025/03/09'
-heroImage: '/assets/blog/tarzan deploying.webp'
----
-
 # How to be a Tarzan developer 🏕️💻
 
 Let’s talk about optimizing our time away from our systems—because sometimes, we gotta code from the wild.
@@ -17,7 +8,7 @@ A **Tarzan Developer** is someone who can code from anywhere—even from a jungl
 
 Yeah, I just made this up. But **hear me out**—with modern tech, you can actually pull this off. Remote access, mobile development, and cloud tools have come so far that you can write code while chilling on a tree branch (hypothetically).
 
-![alt text](<tarzan deploying.webp>)
+![alt text](https://raw.githubusercontent.com/hvkalayil/hvkalayil.github.io/main/src/content/blogs/How%20to%20be%20a%20Tarzan%20developer/tarzan%20deploying.webp)
 
 ## Why? 🚀
 
