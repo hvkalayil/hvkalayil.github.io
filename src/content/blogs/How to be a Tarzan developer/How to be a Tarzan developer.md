@@ -18,7 +18,7 @@ I travel weekly from home to the office, and during that time, **my beloved pers
 
 Spoiler alert: Yes. And it felt amazing. For a while. Then reality hit.
 
-![alt text](<mobile expectation.webp>)
+![alt text](https://raw.githubusercontent.com/hvkalayil/hvkalayil.github.io/main/src/content/blogs/How%20to%20be%20a%20Tarzan%20developer/mobile%20expectation.webp)
 
 ## How? 🛠️
 
@@ -35,7 +35,7 @@ Alright, let’s break it down. **Setting up a system that lets you work from an
 3. Use a Terminal-Based IDE 🧑‍💻
    1. You need a code editor that runs inside a terminal. I used **Neovim** with **LazyVim—but** that’s a rant for another day. Let’s just say, **it was an emotional rollercoaster.**
 
-![alt text](<exit vim.webp>)
+![alt text](https://raw.githubusercontent.com/hvkalayil/hvkalayil.github.io/main/src/content/blogs/How%20to%20be%20a%20Tarzan%20developer/exit%20vim.webp)
 ## Who is this even for? 🎯
 
 Honestly? I thought it was for me, but it turns out… **I am NOT a Tarzan developer.** 🏴‍☠️
@@ -49,7 +49,7 @@ It was fun at first—felt like I was in Watch Dogs, hacking into systems from m
 🚨 BUT there’s a problem:
 
 **Tailscale does NOT auto-reconnect** once disconnected. So if my phone lost connection, I had to go back home, manually restart it, and cry a little.
-![alt text](<tailscale disconnected.gif>)
+![alt text](https://raw.githubusercontent.com/hvkalayil/hvkalayil.github.io/main/src/content/blogs/How%20to%20be%20a%20Tarzan%20developer/tailscale%20disconnected.gif)
 
 ## Final Thoughts 🌲
 
