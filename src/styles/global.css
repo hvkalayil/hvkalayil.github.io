@@ -8,17 +8,18 @@
 @tailwind utilities;
 
 @theme {
-  --color-sidebar: oklch(99.011% 0.0069 219.56);
-  --color-sidebar-dark: oklch(26.221% 0.00577 236.76);
-  --color-primary-100: oklch(99.011% 0.0069 219.56 / 0.58824);
-  --color-primary-900: oklch(92.719% 0.01361 226.57);
-  --color-primary-dark-100: oklch(26.221% 0.00577 236.76 / 0.67843);
-  --color-primary-dark-900: oklch(22.515% 0.00493 248.05);
-  --color-accent-0: oklch(77.425% 0.13127 218.05 / 0.05882);
-  --color-accent-100: oklch(77.425% 0.13127 218.05 / 0.43137);
-  --color-accent-900: oklch(77.425% 0.13127 218.05);
-  --color-body: oklch(36.386% 0 none);
-  --color-body-dark: oklch(89.14% 0.01282 228.94);
+  /* Use simple hex colors instead of OKLCH so tools like html2canvas don't choke on parsing */
+  --color-sidebar: #f3f4f6;
+  --color-sidebar-dark: #111827;
+  --color-primary-100: #e5e7eb;
+  --color-primary-900: #1f2937;
+  --color-primary-dark-100: #4b5563;
+  --color-primary-dark-900: #020617;
+  --color-accent-0: #dbeafe;
+  --color-accent-100: #60a5fa;
+  --color-accent-900: #1d4ed8;
+  --color-body: #111827;
+  --color-body-dark: #e5e7eb;
 
   --font-hero: Kanit, sans-serif;
   --font-body: Quicksand, sans-serif;
