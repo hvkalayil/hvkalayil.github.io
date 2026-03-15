@@ -1,1 +1,0 @@
-import{i,C as c,D as _,E as h,n as r,F as d,G as k,H as u,I as y,U as I}from"./template.CTk3y08m.js";function v(n,f,t){r&&d();var e=n,s=I,a,o=i()?c:_;h(()=>{o(s,s=f())&&(a&&k(a),a=u(()=>t(e)))}),r&&(e=y)}export{v as k};
