@@ -1,5 +1,4 @@
 <script>
-    import { slide } from "svelte/transition";
     import { currentyear } from "../../../../../store/store";
 
     const MY_PICTURES = {
@@ -20,11 +19,9 @@
     $: src = MY_PICTURES[$currentyear] || "assets/me/5.webp";
 </script>
 
-{#key src}
-    <img transition:slide
+    <img
         id="myPic"
         alt="HVK"
         {src}
-        class="flex-col w-full h-auto mb-2 md:h-fit md:mr-2"
+        class="flex-col w-full h-auto mb-2 md:h-fit md:mr-2 transition-opacity duration-300"
     />
-{/key}
