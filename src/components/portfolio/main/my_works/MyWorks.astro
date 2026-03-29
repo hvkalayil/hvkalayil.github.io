@@ -7,5 +7,7 @@ works.sort((a, b) => b.data.sortOrder - a.data.sortOrder);
 ---
 
 <div class="body-container" id="worksPage">
-    {works.map((work) => <WorkCard project={work} />)}
+    <div class="columns-1 md:columns-2 gap-4 w-full h-fit block group/list">
+        {works.map((work) => <WorkCard project={work} />)}
+    </div>
 </div>

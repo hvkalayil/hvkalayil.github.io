@@ -7,20 +7,13 @@
 </script>
 
 {#key journey.year}
-    <h1
-        transition:slide
-        class="underline font-bold tracking-wide md:text-xl text-lg"
-    >
+    <h1 transition:slide={{ duration: 800 }} class="underline font-bold tracking-wide md:text-xl text-lg">
         Journey Logs {journey.year}
     </h1>
-    <p transition:slide  id="journeyDescription" class="p-2">
+    <p transition:slide={{ duration: 800 }} id="journeyDescription" class="p-2 transition-opacity duration-300">
         {journey.description}
     </p>
-    <ul
-        transition:slide
-        id="journeyPoints"
-        class="detailPaneUl pl-10"
-    >
+    <ul transition:slide={{ duration: 800 }} id="journeyPoints" class="detailPaneUl pl-10 transition-opacity duration-300">
         {@html journey.points}
     </ul>
 {/key}

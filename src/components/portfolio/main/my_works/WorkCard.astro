@@ -13,14 +13,6 @@ const { Content } = await render(project);
 
 <script>
     const onMounted = () => {
-        document.querySelectorAll(".projectCard").forEach((card) => {
-            card.addEventListener("mouseleave", (event) => {
-                if (event.currentTarget) {
-                    (event.currentTarget as HTMLElement).scrollTop = 0;
-                }
-            });
-        });
-
         const showGif = (event: Event) => {
             const obj = event.currentTarget as HTMLImageElement;
             if (obj?.src.endsWith(".png")) {
@@ -44,13 +36,13 @@ const { Content } = await render(project);
     document.addEventListener("DOMContentLoaded", onMounted);
 </script>
 
-<div class="card-container">
-    <div id="scrollable" class="card projectCard">
+<div class="card-container group-hover/list:opacity-50 hover:!opacity-100 transition-opacity duration-300">
+    <div id="scrollable" class="card projectCard group">
         <!-- Heading -->
         <div class="heading">
             <a class="mt-2" target="_blank" href={project.data.link}>
                 <h2
-                    class="flex my-1 text-xl font-bold transition text-accent-900 hover:decoration-2 items-center"
+                    class="flex my-1 text-xl font-bold transition-all text-accent-900 hover:text-accent-100 items-center"
                 >
                     {project.data.name} &nbsp;
                     {
@@ -73,11 +65,13 @@ const { Content } = await render(project);
                     }
                 </h2>
             </a>
-            <img
-                class="projectImage work-img w-full aspect-video"
-                src={`assets/projects/${project.data.imgPath}.png`}
-                alt={`${project.data.name} Overview`}
-            />
+            <div class="overflow-hidden rounded-lg shadow-sm border border-black/5 dark:border-white/5">
+                <img
+                    class="projectImage work-img w-full aspect-video transition-transform duration-700 ease-out group-hover:scale-105"
+                    src={`assets/projects/${project.data.imgPath}.png`}
+                    alt={`${project.data.name} Overview`}
+                />
+            </div>
             <div class="flex flex-row mt-2">
                 {
                     project.data.icons.map((icon) => {

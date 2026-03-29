@@ -13,24 +13,61 @@ import AboutMe from "./about_me/AboutMe.astro";
         if (!myWorksBtn || !aboutMeBtn) return;
 
         const changePage = (pageName = "worksPage") => {
-            // Transitioning
+            if (currentPage === pageName) return;
             const curr = document.getElementById(currentPage);
             const nxt = document.getElementById(pageName);
 
             if (!curr || !nxt) return;
 
-            curr.style.display = "none";
-            nxt.style.display = "flex";
+            // Animate out current page smoothly
+            curr.style.transition = "opacity 0.25s ease-out, transform 0.25s ease-out";
+            curr.style.opacity = "0";
+            curr.style.transform = "translateY(15px) scale(0.98)";
 
-            nxt.classList.add("transit");
             setTimeout(() => {
+                curr.style.display = "none";
+                curr.style.transform = ""; // Reset for future usage
+                
+                // Prepare next page invisibly
+                nxt.style.display = "flex";
+                nxt.style.opacity = "0";
+                nxt.style.transform = "translateY(25px) scale(0.98)";
+                nxt.style.transition = "none";
+                
+                // Trigger reflow to apply none transition
+                void nxt.offsetHeight;
+
+                // Animate in next page luxuriously
+                nxt.style.transition = "opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)";
                 nxt.style.opacity = "1";
-            }, 800);
-            currentPage = pageName;
+                nxt.style.transform = "translateY(0) scale(1)";
+                
+                currentPage = pageName;
+            }, 250);
         };
 
         myWorksBtn.addEventListener("click", () => changePage("worksPage"));
         aboutMeBtn.addEventListener("click", () => changePage("aboutPage"));
+
+        // Elegant pulse background mouse effect
+        const pulseContainer = document.querySelector('.bg-elegant-pulse') as HTMLElement;
+        if (pulseContainer) {
+            pulseContainer.addEventListener('mousemove', (e: MouseEvent) => {
+                const rect = pulseContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                pulseContainer.style.setProperty('--mouse-x', `${x}px`);
+                pulseContainer.style.setProperty('--mouse-y', `${y}px`);
+                
+                if (!pulseContainer.classList.contains('mouse-active')) {
+                    pulseContainer.classList.add('mouse-active');
+                }
+            });
+            pulseContainer.addEventListener('mouseleave', () => {
+                pulseContainer.classList.remove('mouse-active');
+            });
+        }
 
         document.removeEventListener("DOMContentLoaded", onMounted);
     };
@@ -39,7 +76,7 @@ import AboutMe from "./about_me/AboutMe.astro";
 </script>
 
 <div
-    class="flex w-full bg-primary-900 dark:bg-primary-dark-900 h-screen md:w-3/4 overflow-visible overflow-x-hidden"
+    class="flex w-full bg-primary-900 dark:bg-primary-dark-900 min-h-screen md:w-3/4 overflow-visible overflow-x-hidden relative isolate bg-elegant-pulse"
 >
     <MyWorks />
 

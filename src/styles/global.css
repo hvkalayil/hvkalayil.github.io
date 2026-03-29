@@ -36,15 +36,22 @@
   }
 
   .card-container {
-    @apply flex w-full h-fit md:w-1/2 md:h-1/2 p-4 hover:scale-105 transition shadow-xl shadow-accent-0 hover:shadow-inner;
+    @apply w-full p-4 break-inside-avoid inline-block;
   }
 
   .card {
-    @apply flex flex-col justify-between overflow-auto p-3 rounded-md w-full z-20 transition-colors bg-sidebar dark:bg-sidebar-dark hover:bg-primary-100 hover:dark:bg-primary-dark-100 hover:shadow-sm hover:shadow-accent-100 hover:bg-gradient-to-r hover:from-accent-0;
+    @apply flex flex-col justify-between overflow-hidden p-5 rounded-2xl w-full h-auto z-20 transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
+    bg-accent-0 dark:bg-sidebar-dark/70 backdrop-blur-xl
+    border border-black/5 dark:border-white/5
+    shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+    hover:bg-sidebar/60 hover:dark:bg-accent-900/5
+    hover:border-accent-900/30 hover:dark:border-accent-900/40
+    hover:shadow-[0_8px_30px_rgba(43,201,237,0.1)] dark:hover:shadow-[0_8px_30px_rgba(43,201,237,0.15)]
+    hover:-translate-y-1 hover:scale-[1.01];
   }
 
   .card-style {
-    @apply transition-colors bg-sidebar dark:bg-sidebar-dark hover:bg-primary-100 hover:dark:bg-primary-dark-100 hover:shadow-sm hover:shadow-accent-100 hover:bg-gradient-to-r hover:from-accent-0
+    @apply transition-all duration-500 bg-sidebar/80 dark:bg-sidebar-dark/70 border border-black/5 dark:border-white/5 hover:bg-sidebar/95 hover:dark:bg-sidebar-dark/85 hover:border-accent-900/50 hover:-translate-y-1;
   }
 
   .body-container {
@@ -235,4 +242,72 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #2BC9ED;
   border-radius: 50%;
   cursor: pointer;
+}
+
+/* Elegant Dotted Background Animation */
+.bg-elegant-pulse {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-elegant-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle, rgba(43, 201, 237, 0.8) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(43, 201, 237, 0.4) 1px, transparent 1px);
+  background-size: 25px 25px, 40px 40px;
+  background-position: 0 0, 20px 20px;
+  animation: parallaxDots 10s linear infinite, dotPulse 4s ease-in-out infinite alternate;
+}
+
+.dark .bg-elegant-pulse::before {
+  background-image: 
+    radial-gradient(circle, rgba(43, 201, 237, 0.4) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(43, 201, 237, 0.15) 1px, transparent 1px);
+}
+
+.bg-elegant-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle, rgba(43, 201, 237, 1) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(43, 201, 237, 0.8) 1.5px, transparent 1.5px);
+  background-size: 25px 25px, 40px 40px;
+  background-position: 0 0, 20px 20px;
+  animation: parallaxDots 10s linear infinite;
+  -webkit-mask-image: radial-gradient(150px circle at var(--mouse-x, -100px) var(--mouse-y, -100px), black, transparent);
+  mask-image: radial-gradient(150px circle at var(--mouse-x, -100px) var(--mouse-y, -100px), black, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.bg-elegant-pulse.mouse-active::after {
+  opacity: 1;
+}
+
+.dark .bg-elegant-pulse::after {
+  background-image: 
+    radial-gradient(circle, rgba(43, 201, 237, 0.8) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(43, 201, 237, 0.4) 1.5px, transparent 1.5px);
+}
+
+@keyframes parallaxDots {
+  0% {
+    background-position: 0px 0px, 20px 20px;
+  }
+  100% {
+    background-position: -25px -25px, -20px -20px;
+  }
+}
+
+@keyframes dotPulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
 }
