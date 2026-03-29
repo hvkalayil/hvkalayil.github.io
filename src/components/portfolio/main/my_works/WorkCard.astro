@@ -13,14 +13,6 @@ const { Content } = await render(project);
 
 <script>
     const onMounted = () => {
-        document.querySelectorAll(".projectCard").forEach((card) => {
-            card.addEventListener("mouseleave", (event) => {
-                if (event.currentTarget) {
-                    (event.currentTarget as HTMLElement).scrollTop = 0;
-                }
-            });
-        });
-
         const showGif = (event: Event) => {
             const obj = event.currentTarget as HTMLImageElement;
             if (obj?.src.endsWith(".png")) {

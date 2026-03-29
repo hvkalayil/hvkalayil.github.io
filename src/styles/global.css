@@ -36,11 +36,11 @@
   }
 
   .card-container {
-    @apply flex w-full h-[500px] md:w-1/2 md:h-1/2 p-4;
+    @apply w-full p-4 break-inside-avoid inline-block;
   }
 
   .card {
-    @apply flex flex-col justify-between overflow-auto p-5 rounded-2xl w-full z-20 transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
+    @apply flex flex-col justify-between overflow-hidden p-5 rounded-2xl w-full h-auto z-20 transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
     bg-sidebar/80 dark:bg-sidebar-dark/70 backdrop-blur-xl
     border border-black/5 dark:border-white/5
     shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)]
