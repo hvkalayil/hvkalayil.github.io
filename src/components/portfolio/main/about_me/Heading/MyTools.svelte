@@ -1,5 +1,5 @@
 <script>
-    import { fade } from "svelte/transition";
+    import { slide  } from "svelte/transition";
     import jsonData from "../../../../../content/tech.json"
     import { currentyear } from "../../../../../store/store";
 
@@ -7,7 +7,7 @@
 </script>
 
 {#each technologies as tech (tech.alt)}
-    <img transition:fade={{ duration: 200 }}
+    <img transition:slide={{ duration: 200 }}
         class="flex-col w-8 m-1 md:w-5 md:m-2 overflow-auto transition-transform hover:scale-110"
         src={tech.src} 
         alt={tech.alt} 

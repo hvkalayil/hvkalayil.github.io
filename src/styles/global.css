@@ -44,10 +44,10 @@
     bg-accent-0 dark:bg-sidebar-dark/70 backdrop-blur-xl
     border border-black/5 dark:border-white/5
     shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)]
-    hover:bg-sidebar/80 hover:dark:bg-accent-900/10
-    hover:border-accent-900/50 hover:dark:border-accent-900/60
-    hover:shadow-[0_8px_30px_rgba(43,201,237,0.15)] dark:hover:shadow-[0_8px_30px_rgba(43,201,237,0.25)]
-    hover:-translate-y-2 hover:scale-[1.02];
+    hover:bg-sidebar/60 hover:dark:bg-accent-900/5
+    hover:border-accent-900/30 hover:dark:border-accent-900/40
+    hover:shadow-[0_8px_30px_rgba(43,201,237,0.1)] dark:hover:shadow-[0_8px_30px_rgba(43,201,237,0.15)]
+    hover:-translate-y-1 hover:scale-[1.01];
   }
 
   .card-style {

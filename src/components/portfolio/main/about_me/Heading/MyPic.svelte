@@ -1,4 +1,5 @@
 <script>
+    import { fade } from "svelte/transition";
     import { currentyear } from "../../../../../store/store";
 
     const MY_PICTURES = {
@@ -16,12 +17,17 @@
         2025: "assets/me/6.webp",
     };
 
-    $: src = MY_PICTURES[$currentyear] || "assets/me/5.webp";
+    $: src = MY_PICTURES[$currentyear] || "assets/me/6.webp";
 </script>
 
-    <img
-        id="myPic"
-        alt="HVK"
-        {src}
-        class="flex-col w-full h-auto mb-2 md:h-fit md:mr-2 transition-opacity duration-300"
-    />
+<div class="grid w-full h-auto min-h-72 mb-2 md:h-fit md:mr-2">
+    {#key src}
+        <img
+            transition:fade={{ duration: 800 }}
+            id="myPic"
+            alt="HVK"
+            {src}
+            class="col-start-1 row-start-1 flex-col w-full h-auto object-cover rounded-md"
+        />
+    {/key}
+</div>
