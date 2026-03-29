@@ -41,10 +41,10 @@
 
   .card {
     @apply flex flex-col justify-between overflow-hidden p-5 rounded-2xl w-full h-auto z-20 transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
-    bg-sidebar/80 dark:bg-sidebar-dark/70 backdrop-blur-xl
+    bg-accent-0 dark:bg-sidebar-dark/70 backdrop-blur-xl
     border border-black/5 dark:border-white/5
     shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)]
-    hover:bg-accent-0 hover:dark:bg-accent-900/10
+    hover:bg-sidebar/80 hover:dark:bg-accent-900/10
     hover:border-accent-900/50 hover:dark:border-accent-900/60
     hover:shadow-[0_8px_30px_rgba(43,201,237,0.15)] dark:hover:shadow-[0_8px_30px_rgba(43,201,237,0.25)]
     hover:-translate-y-2 hover:scale-[1.02];
@@ -257,11 +257,17 @@ input[type="range"]::-webkit-slider-thumb {
   z-index: -1;
   pointer-events: none;
   background-image: 
-    radial-gradient(circle, rgba(43, 201, 237, 0.4) 1.5px, transparent 1.5px),
-    radial-gradient(circle, rgba(43, 201, 237, 0.15) 1px, transparent 1px);
+    radial-gradient(circle, rgba(43, 201, 237, 0.8) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(43, 201, 237, 0.4) 1px, transparent 1px);
   background-size: 25px 25px, 40px 40px;
   background-position: 0 0, 20px 20px;
   animation: parallaxDots 10s linear infinite, dotPulse 4s ease-in-out infinite alternate;
+}
+
+.dark .bg-elegant-pulse::before {
+  background-image: 
+    radial-gradient(circle, rgba(43, 201, 237, 0.4) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(43, 201, 237, 0.15) 1px, transparent 1px);
 }
 
 @keyframes parallaxDots {
