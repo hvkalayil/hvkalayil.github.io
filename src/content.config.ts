@@ -13,11 +13,8 @@ const worksCollection = defineCollection({
     }),
 });
 
-const blogsCollection = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./src/content/blogs" }),
-});
+
 
 export const collections = {
     works: worksCollection,
-    blogs: blogsCollection,
 };
