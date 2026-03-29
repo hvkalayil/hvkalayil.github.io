@@ -49,6 +49,26 @@ import AboutMe from "./about_me/AboutMe.astro";
         myWorksBtn.addEventListener("click", () => changePage("worksPage"));
         aboutMeBtn.addEventListener("click", () => changePage("aboutPage"));
 
+        // Elegant pulse background mouse effect
+        const pulseContainer = document.querySelector('.bg-elegant-pulse') as HTMLElement;
+        if (pulseContainer) {
+            pulseContainer.addEventListener('mousemove', (e: MouseEvent) => {
+                const rect = pulseContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                pulseContainer.style.setProperty('--mouse-x', `${x}px`);
+                pulseContainer.style.setProperty('--mouse-y', `${y}px`);
+                
+                if (!pulseContainer.classList.contains('mouse-active')) {
+                    pulseContainer.classList.add('mouse-active');
+                }
+            });
+            pulseContainer.addEventListener('mouseleave', () => {
+                pulseContainer.classList.remove('mouse-active');
+            });
+        }
+
         document.removeEventListener("DOMContentLoaded", onMounted);
     };
 
