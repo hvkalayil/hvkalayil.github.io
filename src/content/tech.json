@@ -214,5 +214,41 @@
         "alt": "Postgres",
         "title": "Postgres",
         "year": 2025
+    },
+    {
+        "src": "assets/technologies/java.webp",
+        "alt": "Java",
+        "title": "Java",
+        "year": 2026
+    },
+    {
+        "src": "assets/technologies/solid.webp",
+        "alt": "Solid",
+        "title": "Solid",
+        "year": 2026
+    },
+    {
+        "src": "assets/technologies/elysia.webp",
+        "alt": "Elysia",
+        "title": "Elysia",
+        "year": 2026
+    },
+    {
+        "src": "assets/technologies/pocketbase.webp",
+        "alt": "Pocketbase",
+        "title": "Pocketbase",
+        "year": 2026
+    },
+    {
+        "src": "assets/technologies/wcs.webp",
+        "alt": "WCS (HCL Commerce)",
+        "title": "WCS (HCL Commerce)",
+        "year": 2026
+    },
+    {
+        "src": "assets/technologies/jenkins.webp",
+        "alt": "Jenkins",
+        "title": "Jenkins",
+        "year": 2026
     }
 ]

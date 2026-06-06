@@ -28,15 +28,15 @@
                         name="journey"
                         id="journey"
                         min="20140"
-                        max="20250"
-                        value="20250"
+                        max="20260"
+                        value="20260"
                         on:input={onTimelineChange}
                     />
 
                     <div
                         class="font-bold flex flex-col items-center p-2 card-style"
                     >
-                        <h6>2025</h6>
+                        <h6>2026</h6>
                         <span>♾️</span>
                     </div>
                 </div>

@@ -1,9 +1,45 @@
 [
     {
+        "id": "Litmus7",
+        "first": "Litmus7",
+        "second": "Senior Software Engineer",
+        "third": "<time datetime=\"2025-29-09\">September 29th, 2025</time> - Present",
+        "body": [
+            {
+                "title": "Myer (April 2026 - Present)",
+                "points": [
+                    "<strong>Technology Stack</strong> – AWS Lambda, Step Functions, EventBridge, DMS, RDS, Glue, IBM WebSphere Commerce (WCS).",
+                    "Developed and maintained <strong>backend microservices and enterprise integrations</strong> supporting retail and e-commerce operations.",
+                    "Designed and enhanced <strong>cloud-native ETL workflows</strong> using AWS Step Functions and event-driven architectures.",
+                    "Built AWS Lambda services powering <strong>business-critical retail workflows</strong> and large-scale data processing pipelines.",
+                    "Collaborated with architects and stakeholders to deliver <strong>scalable backend solutions</strong> across multiple systems."
+                ]
+            },
+            {
+                "title": "iPaaS (October 2025 - March 2026)",
+                "points": [
+                    "<strong>Technology Stack</strong> – Next.js, TypeScript, Node.js.",
+                    "Developed <strong>full-stack integration features</strong> across frontend applications and backend APIs.",
+                    "Refactored a complex file-processing framework using <strong>Dependency Injection and Strategy patterns</strong>.",
+                    "Improved platform maintainability, extensibility, and long-term architectural flexibility.",
+                    "Contributed to <strong>application architecture decisions</strong>, engineering standards, and feature delivery."
+                ]
+            },
+            {
+                "title": "Additional Contributions",
+                "points": [
+                    "Conducted <strong>Level 1 technical interviews</strong> as part of the talent acquisition process.",
+                    "Participated in technical evaluations and candidate screening for engineering roles.",
+                    "Achieved <strong>VTEX certification</strong> through internal training and upskilling programs."
+                ]
+            }
+        ]
+    },
+    {
         "id": "TCS1",
         "first": "Tata Consultancy Services(TCS)",
         "second": "Developer",
-        "third": "<time datetime=\"2021-10-07\">October 7th, 2021</time> - Present",
+        "third": "<time datetime=\"2021-10-07\">October 7th, 2021</time> - <time datetime=\"2025-26-09\">September 26th, 2025</time>",
         "body": [
             {
                 "title": "Uniting (May 2025 - Present)",
