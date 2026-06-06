@@ -1,3 +1,3 @@
 import { writable } from "svelte/store";
 
-export const currentyear = writable(2025)
+export const currentyear = writable(2026)

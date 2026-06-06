@@ -15,6 +15,7 @@
         2023: "assets/me/5.webp",
         2024: "assets/me/6.webp",
         2025: "assets/me/6.webp",
+        2026: "assets/me/7.webp",
     };
 
     $: src = MY_PICTURES[$currentyear] || "assets/me/6.webp";
